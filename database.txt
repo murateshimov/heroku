@@ -1,0 +1,201 @@
+Microsoft Windows [Version 10.0.19042.906]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\calb17>cd..
+
+C:\Users>cd..
+
+C:\>cd xampp
+
+C:\xampp>cd mysql]
+The system cannot find the path specified.
+
+C:\xampp>cd mysql
+
+C:\xampp\mysql>cd bin
+
+C:\xampp\mysql\bin>mysql
+ERROR 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061 "Unknown error")
+
+C:\xampp\mysql\bin>mysql
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 2
+Server version: 10.1.35-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> mysql-u root -p
+    ->
+    ->
+    ->
+    ->
+    -> Bye
+
+C:\xampp\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 3
+Server version: 10.1.35-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> CREATE database college;
+Query OK, 1 row affected (0.03 sec)
+
+MariaDB [(none)]> show database
+    -> ByeCtrl-C -- exit!
+
+
+C:\xampp\mysql\bin>show database;
+'show' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\xampp\mysql\bin>show databases
+'show' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\xampp\mysql\bin>show databases
+'show' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\xampp\mysql\bin>show databases;
+'show' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\xampp\mysql\bin>show databases;
+'show' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\xampp\mysql\bin>use college
+'use' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\xampp\mysql\bin>use college;
+'use' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\xampp\mysql\bin>SHOW DATABASES;
+'SHOW' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\xampp\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 4
+Server version: 10.1.35-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| college            |
+| information_schema |
+| marlen             |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+7 rows in set (0.05 sec)
+
+MariaDB [(none)]> use college
+Database changed
+MariaDB [college]> show tables
+    -> ByeCtrl-C -- exit!
+
+
+C:\xampp\mysql\bin>show tables;
+'show' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\xampp\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 19
+Server version: 10.1.35-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show tables
+    -> ;
+ERROR 1046 (3D000): No database selected
+MariaDB [(none)]> show tables;
+ERROR 1046 (3D000): No database selected
+MariaDB [(none)]> use college
+Database changed
+MariaDB [college]> show tables;
+Empty set (0.00 sec)
+
+MariaDB [college]> create table students;
+ERROR 1113 (42000): A table must have at least 1 column
+MariaDB [college]> create table students (id int(25));
+Query OK, 0 rows affected (0.24 sec)
+
+MariaDB [college]> show tables;
++-------------------+
+| Tables_in_college |
++-------------------+
+| students          |
++-------------------+
+1 row in set (0.00 sec)
+
+MariaDB [college]> de
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'de' at line 1
+MariaDB [college]> describe student;
+ERROR 1146 (42S02): Table 'college.student' doesn't exist
+MariaDB [college]> describe student;
+ERROR 1146 (42S02): Table 'college.student' doesn't exist
+MariaDB [college]> describe students;
++-------+---------+------+-----+---------+-------+
+| Field | Type    | Null | Key | Default | Extra |
++-------+---------+------+-----+---------+-------+
+| id    | int(25) | YES  |     | NULL    |       |
++-------+---------+------+-----+---------+-------+
+1 row in set (0.01 sec)
+
+MariaDB [college]> alter table students add column name varchar(20);
+Query OK, 0 rows affected (0.45 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [college]> describe students;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int(25)     | YES  |     | NULL    |       |
+| name  | varchar(20) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.02 sec)
+
+MariaDB [college]> alter table add column surname varchar (20);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'add column surname varchar (20)' at line 1
+MariaDB [college]> alter table students add column surname varchar (20);
+Query OK, 0 rows affected (0.33 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [college]> alter table students add column groups varchar (20);
+Query OK, 0 rows affected (0.26 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [college]> describe students;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| id      | int(25)     | YES  |     | NULL    |       |
+| name    | varchar(20) | YES  |     | NULL    |       |
+| surname | varchar(20) | YES  |     | NULL    |       |
+| groups  | varchar(20) | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+4 rows in set (0.03 sec)
+
+MariaDB [college]>
